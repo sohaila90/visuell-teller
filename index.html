@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Counter</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+           text-align: center;
+            margin: 0;
+        }
+
+        .number {
+            border: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 100px;
+            height: 100%;
+            width: 100%;
+            color: pink;
+        }
+
+        .increaseNumber {
+            color: blueviolet;
+            font-family: sans-serif;
+            font-size: x-large;
+        }
+
+        .decreaseNumber {
+            color: blueviolet;
+            font-family: sans-serif;
+            font-size: x-large; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="number" class="number"></div>
+
+    <button id="increaseNumber" class="increaseNumber" onclick="increaseNumber()">Increase number</button>
+    <button id="decreaseNumber" class="decreaseNumber" onclick="decreaseNumber()">Decrease number</button>
+
+<script>
+let number = 0;
+document.getElementById('number').innerHTML = number;
+
+function increaseNumber() {
+    number++;
+    document.getElementById('number').innerHTML = number;
+}
+function decreaseNumber() {
+    number--;
+    document.getElementById('number').innerHTML = number;
+}
+</script>    
+</body>
+</html>
